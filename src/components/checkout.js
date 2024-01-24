@@ -1,6 +1,5 @@
 "use client";
 import Head from "next/head";
-import Image from "next/image";
 import Script from "next/script";
 import { useState } from "react";
 
@@ -80,10 +79,10 @@ export const Checkout = () => {
       </Head>
       <Script src="https://cdn.jsdelivr.net/gh/efipay/js-payment-token-efi/dist/payment-token-efi.min.js" />
 
-      <main className="bg-gray-100">
+      <main className="bg-white">
       
 
-        <div className="bg-gray-100">
+        <div className="bg-white">
           <div className="w-full max-w-3xl mx-auto p-2">
             <div className="bg-white p-4 rounded-lg shadow-md border text-gray-600 ">
             
@@ -262,7 +261,7 @@ export const Checkout = () => {
               </div>
 
               <div className="mt-8 flex justify-end">
-                <button type="submit" onClick={handleSubmit}  className="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-700 dark:bg-teal-600 dark:text-white dark:hover:bg-teal-900">
+                <button type="submit" onClick={handleSubmit}  className="text-white px-4 py-2 rounded-lg dark:text-white dark:hover:bg-[#4668dc90]  bg-[#4668dc] ">
                   Efetuar Pagamento
                 </button>
               </div>

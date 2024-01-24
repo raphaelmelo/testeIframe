@@ -80,7 +80,7 @@ export const Checkout = () => {
       </Head>
       <Script src="https://cdn.jsdelivr.net/gh/efipay/js-payment-token-efi/dist/payment-token-efi.min.js" />
 
-      <main>
+      <main className="bg-gray-100">
       
 
         <div className="bg-gray-100">

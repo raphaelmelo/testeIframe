@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {Checkout} from "../components/checkout";
 
 export default function Home() {

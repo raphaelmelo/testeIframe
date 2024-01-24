@@ -82,15 +82,11 @@ export const Checkout = () => {
       <Script src="https://cdn.jsdelivr.net/gh/efipay/js-payment-token-efi/dist/payment-token-efi.min.js" />
 
       <main>
-        {/* Criar form com os inputs e botão enviar para API */}
-        <form>
-           
-          <input type="submit" value="Submit" onClick={handleSubmit} />
-        </form>
+      
 
         <div className="bg-gray-100 dark:bg-gray-900">
-          <div className="w-full max-w-3xl mx-auto p-8">
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md border dark:border-gray-700">
+          <div className="w-full max-w-3xl mx-auto p-2">
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md border dark:border-gray-700">
               <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
                 Checkout
               </h1>
@@ -271,8 +267,8 @@ export const Checkout = () => {
               </div>
 
               <div className="mt-8 flex justify-end">
-                <button className="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-700 dark:bg-teal-600 dark:text-white dark:hover:bg-teal-900">
-                  Place Order
+                <button type="submit" onClick={handleSubmit}  className="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-700 dark:bg-teal-600 dark:text-white dark:hover:bg-teal-900">
+                  Efetuar Pagamento
                 </button>
               </div>
             </div>

@@ -83,9 +83,9 @@ export const Checkout = () => {
       <main>
       
 
-        <div className="bg-gray-100 dark:bg-gray-900">
+        <div className="bg-gray-100">
           <div className="w-full max-w-3xl mx-auto p-2">
-            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md border dark:border-gray-700">
+            <div className="bg-white p-4 rounded-lg shadow-md border text-gray-600 ">
             
 
               {/* Shipping Address */}
@@ -95,27 +95,27 @@ export const Checkout = () => {
                   <div>
                     <label
                       htmlFor="first_name"
-                      className="block text-gray-700 dark:text-white mb-1"
+                      className="block mb-1"
                     >
                       First Name
                     </label>
                     <input
                       type="text"
                       id="first_name"
-                      className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
+                      className="w-full rounded-lg border py-2 px-3 "
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="last_name"
-                      className="block text-gray-700 dark:text-white mb-1"
+                      className="block mb-1"
                     >
                       Last Name
                     </label>
                     <input
                       type="text"
                       id="last_name"
-                      className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
+                      className="w-full rounded-lg border py-2 px-3 "
                     />
                   </div>
                 </div>
@@ -123,28 +123,28 @@ export const Checkout = () => {
                 <div className="mt-4">
                   <label
                     htmlFor="address"
-                    className="block text-gray-700 dark:text-white mb-1"
+                    className="block mb-1"
                   >
                     Address
                   </label>
                   <input
                     type="text"
                     id="address"
-                    className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
+                    className="w-full rounded-lg border py-2 px-3 "
                   />
                 </div>
 
                 <div className="mt-4">
                   <label
                     htmlFor="city"
-                    className="block text-gray-700 dark:text-white mb-1"
+                    className="block mb-1"
                   >
                     City
                   </label>
                   <input
                     type="text"
                     id="city"
-                    className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
+                    className="w-full rounded-lg border py-2 px-3 "
                   />
                 </div>
 
@@ -152,27 +152,27 @@ export const Checkout = () => {
                   <div>
                     <label
                       htmlFor="state"
-                      className="block text-gray-700 dark:text-white mb-1"
+                      className="block mb-1"
                     >
                       State
                     </label>
                     <input
                       type="text"
                       id="state"
-                      className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
+                      className="w-full rounded-lg border py-2 px-3 "
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="zip"
-                      className="block text-gray-700 dark:text-white mb-1"
+                      className="block mb-1"
                     >
                       ZIP Code
                     </label>
                     <input
                       type="text"
                       id="zip"
-                      className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
+                      className="w-full rounded-lg border py-2 px-3 "
                     />
                   </div>
                 </div>
@@ -180,13 +180,13 @@ export const Checkout = () => {
 
               {/* Payment Information */}
               <div>
-                <h2 className="text-xl font-semibold text-gray-700 dark:text-white mb-2">
+                <h2 className="text-xl font-semibold mb-2">
                   Payment Information
                 </h2>
                 <div className="mt-4">
                   <label
                     htmlFor="card_number"
-                    className="block text-gray-700 dark:text-white mb-1"
+                    className="block mb-1"
                   >
                     Card Number
                   </label>
@@ -195,7 +195,7 @@ export const Checkout = () => {
                     id="card_number"
                     placeholder="Num Cartao"
                     name="numCartao"
-                    className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
+                    className="w-full rounded-lg border py-2 px-3 "
                     onChange={(event) =>
                       setState({ ...state, numCartao: event.target.value })
                     }
@@ -206,7 +206,7 @@ export const Checkout = () => {
                   <div >
                     <label
                       htmlFor="exp_date"
-                      className="block text-gray-700 dark:text-white mb-1"
+                      className="block mb-1"
                     >
                       Expiration Date
                     </label>
@@ -216,7 +216,7 @@ export const Checkout = () => {
                       type="text"
                       placeholder="Expiration Month"
                       name="expirationMonth"
-                      className="w-12/12 rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
+                      className="w-12/12 rounded-lg border py-2 px-3 "
                       id="exp_date_month"
                       onChange={(event) =>
                         setState({
@@ -229,7 +229,7 @@ export const Checkout = () => {
                       type="text"
                       placeholder="Expiration Year"
                       name="expirationYear"
-                      className="w-12/12 rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
+                      className="w-12/12 rounded-lg border py-2 px-3 "
                       id="exp_date_year"
                       onChange={(event) =>
                         setState({
@@ -243,7 +243,7 @@ export const Checkout = () => {
                   <div>
                     <label
                       htmlFor="cvv"
-                      className="block text-gray-700 dark:text-white mb-1"
+                      className="block mb-1"
                     >
                       CVV
                     </label>
@@ -255,7 +255,7 @@ export const Checkout = () => {
                         setState({ ...state, cvv: event.target.value })
                       }
                       id="cvv"
-                      className="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none"
+                      className="w-full rounded-lg border py-2 px-3 "
                     />
                   </div>
                 </div>

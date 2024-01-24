@@ -85,11 +85,7 @@ export const Checkout = () => {
         <div className="bg-white">
           <div className="w-full max-w-3xl mx-auto p-2">
             <div className="bg-white p-4 rounded-lg shadow-md border text-gray-600 ">
-            
-
-              {/* Shipping Address */}
               <div className="mb-6">
-             
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label
@@ -177,7 +173,6 @@ export const Checkout = () => {
                 </div>
               </div>
 
-              {/* Payment Information */}
               <div>
                 <h2 className="text-xl font-semibold mb-2">
                   Payment Information

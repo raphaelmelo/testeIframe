@@ -1,33 +1,17 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  webpack: (config) => {
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      net: false,
-      os: false,
-      tls: false,
-      fs: false,
-      path: false,
-      child_process: false,
-      canvas: false,
-    };
-    return config;
-  },
+// next.config.js
+
+module.exports = {
   async headers() {
     return [
       {
-        // Aplica a todas as páginas
-        source: "/(.*)",
+        source: '/(.*)',
         headers: [
           {
-            'key': 'Content-Security-Policy',
-            'value': "frame-ancestors *",
+            key: 'Content-Security-Policy',
+            value: "frame-ancestors 'self' *", // Permite a incorporação em qualquer lugar
           },
         ],
       },
     ];
   },
 };
-
-export default nextConfig;

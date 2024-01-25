@@ -2,6 +2,9 @@
 import { useState } from "react";
 import { Checkout } from "./checkout";
 
+interface TabProps {
+  atk: string;
+}
 const cards = [
   {
     companyId: "123456789",
@@ -54,7 +57,7 @@ const cards = [
     nickName: "Cartão de Débito",
   },
 ];
-export const Tabs = () => {
+export const Tabs = ({ atk }: TabProps) => {
   const [openTab, setOpenTab] = useState<number>(1);
 
   const handleTabClick = (tabNumber: number) => {
@@ -64,26 +67,28 @@ export const Tabs = () => {
     <div className="bg-gray-100 font-sans flex h-screen items-center justify-center">
       <div className="p-8">
         <div className="max-w-md mx-auto  bg-white rounded-lg ">
+          <p className="text-gray-400"> {"meu : " + atk}</p>
           {openTab === 1 && (
             <>
               <div className="max-w-2xl mx-auto inter ">
                 <div className="p-4 max-w-md bg-white rounded-lg border shadow-md sm:p-8  dark:border-gray-200">
                   <div className="mb-4">
-                    {openTab !== 1  && <button className="inline-flex items-center text-base font-semibold text-gray-400 ">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M11.2657 11.4343L15.45 7.25C15.8642 6.83579 15.8642 6.16421 15.45 5.75C15.0358 5.33579 14.3642 5.33579 13.95 5.75L8.40712 11.2929C8.01659 11.6834 8.01659 12.3166 8.40712 12.7071L13.95 18.25C14.3642 18.6642 15.0358 18.6642 15.45 18.25C15.8642 17.8358 15.8642 17.1642 15.45 16.75L11.2657 12.5657C10.9533 12.2533 10.9533 11.7467 11.2657 11.4343Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </button>
-                    }
+                    {openTab !== 1 && (
+                      <button className="inline-flex items-center text-base font-semibold text-gray-400 ">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.2657 11.4343L15.45 7.25C15.8642 6.83579 15.8642 6.16421 15.45 5.75C15.0358 5.33579 14.3642 5.33579 13.95 5.75L8.40712 11.2929C8.01659 11.6834 8.01659 12.3166 8.40712 12.7071L13.95 18.25C14.3642 18.6642 15.0358 18.6642 15.45 18.25C15.8642 17.8358 15.8642 17.1642 15.45 16.75L11.2657 12.5657C10.9533 12.2533 10.9533 11.7467 11.2657 11.4343Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
+                    )}
                     <h3 className="text-base font-bold leading-none text-gray-700">
                       Meus Cartões
                     </h3>

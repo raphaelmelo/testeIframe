@@ -1,9 +1,11 @@
+"use client";
+
 import { Tabs } from "@/components/tabs";
 
-export default function CheckoutPage() {
+export default function CheckoutPage({ params }: { params: { atk: string } }) {
   return (
-    <>
-      <Tabs />
-    </>
+    <div>
+      <Tabs atk={params.atk} />
+    </div>
   );
 }
